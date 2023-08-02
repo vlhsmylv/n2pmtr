@@ -1,34 +1,68 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+### 🚀 N2PMT Full-Stack Template
 
-## Getting Started
+#### What's N2PMT?
 
-First, run the development server:
+- **N2PMT** is a Full-Stack Template for developers that want to use NextJs, Next-Auth, Prisma, MongoDB, and TailwindCSS as their tech stack.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+- **N2PMT** is a open source project that every developer can contribute to make it better.
+
+Have any idea? Contribute!
+
+---
+
+#### How to use it?
+
+1. Firstly, clone this repo to your local device
+
+```sh
+git clone https://github.com/vlhsmylv/n2pmt.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Go to directory and run following command
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```sh
+npm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+3. Wait for all dependencies to be installed
 
-## Learn More
+4. Get your **MongoDB** connection string from [MongoDB Atlas](https://www.mongodb.com/atlas/database)
 
-To learn more about Next.js, take a look at the following resources:
+```YAML
+DATABASE_URL="MONGODB_DB_CONNECTION_STR"
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+5. Edit your **Prisma** schema and write following command in your terminal
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```sh
+npx prisma generate
+```
 
-## Deploy on Vercel
+###### It's time to setup Next-Auth!
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Firstly, go to **.env** file and add required _environment variables_
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```YAML
+NEXTAUTH_SECRET="YOUR_SECRET_KEY"
+NEXTAUTH_URL="YOUR_URL"
+```
+
+- `NEXTAUTH_SECRET` - Your Next-Auth secret that need to be secure. You can generate it by following command
+
+```sh
+openssl rand hex -32
+```
+
+If you don't have **openssl** then use online tools as [www.lastpass.com](https://www.lastpass.com/features/password-generator) to get secure password
+
+- `NEXTAUTH_URL` - Your project's local or public URL. If your project is in development mode then use `http://localhost:PORT`, but if your project is in production mode, then add your project's public URL
+
+---
+
+#### How to contribute?
+
+1. Follow steps in *How to use it?*
+
+2. Make changes
+
+3. Push it as a new branch!
