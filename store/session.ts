@@ -20,3 +20,11 @@ const sessionSlice = createSlice({
 
 export const { setSession } = sessionSlice.actions;
 export default sessionSlice.reducer;
+
+export const checkSession = (sessionUser: object) => {
+  return typeof sessionUser === "object"
+    ? Object.keys(sessionUser).length === 0
+      ? null
+      : sessionUser
+    : false;
+};
