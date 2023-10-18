@@ -2,9 +2,9 @@
 
 #### What's N2PMT?
 
-- **N2PMT** is a Full-Stack Template for developers that want to use NextJs, Next-Auth, Prisma, MongoDB, and TailwindCSS as their tech stack.
+- **N2PMT** is a Full-Stack Template for developers that want to use NextJs, Next-Auth, Prisma, MongoDB, TailwindCSS, and Redux as their tech stack.
 
-- **N2PMT** is a open source project that every developer can contribute to make it better.
+- **N2PMT** is an open-source project that every developer can contribute to making it better.
 
 Have any idea? Contribute!
 
@@ -18,7 +18,7 @@ Have any idea? Contribute!
 git clone https://github.com/vlhsmylv/n2pmt.git
 ```
 
-2. Go to directory and run following command
+2. Go to the directory and run the following command
 
 ```sh
 npm install
@@ -32,13 +32,13 @@ npm install
 DATABASE_URL="MONGODB_DB_CONNECTION_STR"
 ```
 
-5. Edit your **Prisma** schema and write following command in your terminal
+5. Edit your **Prisma** schema and write the following command in your terminal
 
 ```sh
 npx prisma generate
 ```
 
-###### It's time to setup Next-Auth!
+###### It's time to set up Next-Auth!
 
 1. Firstly, go to **.env** file and add required _environment variables_
 
@@ -47,7 +47,7 @@ NEXTAUTH_SECRET="YOUR_SECRET_KEY"
 NEXTAUTH_URL="YOUR_URL"
 ```
 
-- `NEXTAUTH_SECRET` - Your Next-Auth secret that need to be secure. You can generate it by following command
+- `NEXTAUTH_SECRET` - Your Next-Auth secret that needs to be secure. You can generate it by following the command
 
 ```sh
 openssl rand hex -32
